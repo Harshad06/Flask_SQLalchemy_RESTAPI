@@ -59,7 +59,7 @@ def get_products():
   result = products_schema.dump(all_products)
   return jsonify(result.data)
 
-# Get Single Products
+# Get Single Product
 @app.route('/product/<id>', methods=['GET'])
 def get_product(id):
   product = Product.query.get(id)
